@@ -3,7 +3,9 @@
 # Script to monitor a CouchDB instance's changefeed, and periodically feed the changes into RIAK
 #             18/05/2015 - Darren Gibbard
 #
-#
+#  Notes:
+#    * This script will match CouchDB's '_id' field as the 'KEY' in RIAK, the entire document will then be posted as JSON as the VALUE
+#    * The RIAK_DB variable is the RIAK 'BUCKET' - I've named it DB to avoid confusion for myself :)
 
 usage(){
     echo
